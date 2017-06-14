@@ -15,11 +15,82 @@ html {
  */
 
 body {
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
-  color: #244751;
+  color: #000;
   background-color: #eee;
+}
+
+.container {
+  width: 450px;
+  padding: 20px 30px;;
+  margin: 80px auto 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-height: 1000px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ article.tweet {
+   background-color: #fff;
+   border: 1px solid #ddd;
+   padding: 0px;
+   margin-top: 20px;
+ }
+
+ article.tweet header {
+   position: relative;
+   background-color: #eee;
+   padding: 20px;
+ }
+
+ article.tweet header img.avatar {
+   height: 40px;
+ }
+
+ article.tweet header h2 {
+   vertical-align: top;
+   display: inline-block;
+   line-height: 40px;
+   margin: 0 0 0 10px;
+ }
+
+ article.tweet header .handle {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+ }
+
+ article.tweet p {
+   padding: 20px;
+   margin: 0;
+ }
+
+ article.tweet footer {
+   position: relative;
+   padding: 10px;
+   line-height: 20px;
+   color: #999;
+   font-size: 10px;
+   border-top: 1px solid #eee;
+ }
+
+ article.tweet footer .icons {
+   display: none;
+   position: absolute;
+   right: 20px;
+   top: 10px;
+ }
+
+ article.tweet footer .icons i {
+   margin-left: 10px;
+   font-size: 16px;
+   color: #00a087;
+ }
+
+ article.tweet:hover footer .icons {
+   display: inline-block;
+ }
