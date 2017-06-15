@@ -8,10 +8,20 @@ $(function() {
       method: 'POST',
       data: serializedData,
       success: function (result) {
-        $("#all-tweets").prepend(loadTweets());
+        $("#all-tweets").prepend(loadTweet());
       }
     });
   });
+
+  function loadTweet() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      success: function (result) {
+         $("#all-tweets").prepend(createTweetElement(result[result.length - 1]));
+      }
+    });
+  }
 
   function loadTweets() {
     $.ajax({
