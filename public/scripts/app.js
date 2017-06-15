@@ -1,14 +1,15 @@
-
 $(function() {
+
   $("form").on("submit", function(event) {
     event.preventDefault();
     let serializedData = $(this).serialize();
-    console.log();
     $.ajax({
       url: '/tweets',
       method: 'POST',
       data: serializedData,
-
+      success: function (result) {
+        $("#all-tweets").prepend(loadTweets());
+      }
     });
   });
 
@@ -50,12 +51,11 @@ $(function() {
       </footer>
     </article>`;
     return tweet;
-
   }
 
   function renderTweets(tweets) {
     for (var i = 0; i < tweets.length; i++) {
-      $("#all-tweets").append(createTweetElement(tweets[i]));
+      $("#all-tweets").prepend(createTweetElement(tweets[i]));
     }
   }
 
