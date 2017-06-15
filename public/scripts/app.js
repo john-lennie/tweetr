@@ -1,5 +1,11 @@
 $(function() {
 
+  $( ".toggle-form-button" ).click(function() {
+    $( ".new-tweet" ).slideToggle( "fast", function() {
+      $(".new-tweet form textarea").focus();
+    });
+  });
+
   $("form").on("submit", function(event) {
     event.preventDefault();
     let serializedData = $(this).serialize();

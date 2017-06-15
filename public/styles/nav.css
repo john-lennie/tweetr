@@ -5,7 +5,7 @@
   width: 100vw;
   height: 80px;
   background-color: #00a087;
-  color: #000;
+  color: #fff;
   padding: 0 2em;
 }
 
@@ -20,4 +20,23 @@
   vertical-align: top;
   font-size: 2em;
   line-height: 80px;
+}
+
+#nav-bar .nav-right {
+  float: right;
+  margin-top: 16px;
+}
+
+#nav-bar .nav-right .toggle-form-button {
+  cursor: pointer;
+  background-color: #008c76;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 2em;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+#nav-bar .nav-right .toggle-form-button:hover {
+  background-color: #006f5e;
 }
