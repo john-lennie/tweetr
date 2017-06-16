@@ -2,6 +2,8 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+![alt text](https://github.com/john-lennie/tweetr/blob/master/public/images/tweeter.gif "Tweeter gif")
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
