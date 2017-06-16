@@ -9,6 +9,14 @@ $(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
     let serializedData = $(this).serialize();
+    var x = document.forms["tweetForm"]["text"].value;
+    if (x == "") {
+        alert("No text submitted to post.");
+        return false;
+    } else if (x.length > 140) {
+        alert("Tweet can't be longer than 140 characters!");
+        return false;
+    }
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -17,6 +25,7 @@ $(function() {
         $("#all-tweets").prepend(loadTweet());
       }
     });
+    $("#compose-tweet").val('');
   });
 
   function loadTweet() {

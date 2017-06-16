@@ -9,7 +9,14 @@
   padding: 0 2em;
 }
 
-#nav-bar .logo {
+#nav-bar a.logo {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  height: 80px;
+}
+
+#nav-bar .logo-img {
   display: inline-block;
   width: 80px;
   height: 80px;
